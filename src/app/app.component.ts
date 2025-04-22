@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { PokemonSearchComponent } from './pokemon-search/pokemon-search.component';
 import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
+import { RouterOutlet } from '@angular/router';
 
 
 @Component({
   selector: 'app-root',
-  imports: [PokemonSearchComponent, PokemonDetailsComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
