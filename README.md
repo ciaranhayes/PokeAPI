@@ -1,7 +1,6 @@
 # PokeAPI
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
-
+Simple Pokemon API to help me learn Angular
 ## Development server
 
 To start a local development server, run:
