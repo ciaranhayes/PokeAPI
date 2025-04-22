@@ -1,6 +1,6 @@
 <h1>Pokémon Search</h1>
 <div class="container">
-    <input [(ngModel)]="searchTerm" (input)="filterPokemon" type="text" placeholder="Search Pokémon..." class="search-box">
+    <input [(ngModel)]="searchTerm" (input)="filterPokemon()" type="text" placeholder="Search Pokémon..." class="search-box">
 
     <h3>Favourites</h3>
     <ul *ngIf="favourites.length > 0">
