@@ -19,7 +19,7 @@ export class PokemonDetailsComponent {
   }
 
   goBack(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['/'])
   }
 
 }
