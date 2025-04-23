@@ -1,12 +1,12 @@
-<div class="container">
-  <h2>Pokemon Name</h2>
-  <img src="" alt="pokemon name">
-  <p>Height: 100</p>
-  <p>Weight: 100</p>
-  <button>
-    Add to favourite | Remove from favourites
-  </button>
-  <button (click)="goBack()">
-    Back to Pokemon List
-  </button>
+<div class="container" *ngIf="pokemon">
+  <h2 class="pokemon-name">{{ pokemon.name | titlecase }}</h2>
+  <img [src]="pokemon.sprites?.front_default" alt="{{ pokemon.name }}" class="pokemon-image">
+
+  <p class="pokemon-info">Height: {{ pokemon.height }}</p>
+  <p class="pokemon-info">Weight: {{ pokemon.weight}}</p>
+
+  <div class="button-group">
+    <button (click)="toggleFavourite()">{{ isFavourite ? 'Remove from favourites' : 'Add to favourite' }}</button>
+    <button (click)="goBack()">Back to Pokemon List</button>
+  </div>
 </div>

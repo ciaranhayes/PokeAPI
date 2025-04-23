@@ -18,6 +18,7 @@ export class PokemonSearchComponent {
 
   constructor(private router: Router, private pokemonservice: PokemonService) {
     this.fetchPokemon();
+    this.loadFavourites();
   }
 
   fetchPokemon() {
@@ -31,6 +32,16 @@ export class PokemonSearchComponent {
     this.filteredPokemon = this.allPokemon.filter((pokemon: {name: string}) => {
       return pokemon.name.toLowerCase().includes(this.searchTerm.toLowerCase());
     });
+  }
+
+  loadFavourites() {
+    this.favourites = this.pokemonservice.getFavourites();
+  }
+
+  toggleFavourite(name: string, event: Event) {
+    event.stopPropagation();
+    this.pokemonservice.toggleFavourite(name);
+    this.loadFavourites();
   }
 
   viewDetails(name: string) {
